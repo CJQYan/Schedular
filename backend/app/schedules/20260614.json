@@ -1,8 +1,10 @@
 {
+  "startDate": "2026-06-14",
   "days": [
     [],
     [
       {
+        "id": 1,
         "position": {
           "title": "Cashier",
           "skillRequirements": ["cashier"]
@@ -11,6 +13,7 @@
         "endTime": "13:00"
       },
       {
+        "id": 2,
         "position": {
           "title": "Manager",
           "skillRequirements": ["manager"]
@@ -21,6 +24,7 @@
     ],
     [
       {
+        "id": 3,
         "position": {
           "title": "Cashier",
           "skillRequirements": ["cashier"]
@@ -31,6 +35,7 @@
     ],
     [
       {
+        "id": 4,
         "position": {
           "title": "Stock",
           "skillRequirements": ["stock"]
@@ -42,6 +47,7 @@
     [],
     [
       {
+        "id": 5,
         "position": {
           "title": "Supervisor",
           "skillRequirements": ["supervisor"]

@@ -1,9 +1,10 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pathlib import Path
-import json
+from app.models.week import Week
 
-SCHEDULE_FOLDER = Path("schedules")
+SCHEDULE_FOLDER = Path(__file__).parent / "schedules"
+
 
 app = FastAPI()
 
@@ -13,7 +14,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 
 @app.get("/")
@@ -40,9 +40,26 @@ def get_week(week_start_date: str):
     file_path = SCHEDULE_FOLDER / f"{week_start_date}.json"
 
     if not file_path.exists():
-        raise HTTPException(status_code=404, detail="Week schedule not found")
+        raise HTTPException(
+            status_code=404,
+            detail="Week schedule not found"
+        )
 
-    with open(file_path, "r") as file:
-        data = json.load(file)
+    week = Week.load_from_json(file_path)
 
-    return data
+    return week.to_dict()
+
+@app.put("/weeks/{week_start_date}")
+def update_week(week_start_date: str, week_data: dict):
+    file_path = SCHEDULE_FOLDER / f"{week_start_date}.json"
+
+    if not file_path.exists():
+        raise HTTPException(
+            status_code=404,
+            detail="Week schedule not found"
+        )
+
+    week = Week.from_dict(week_data)
+    week.save_to_json(file_path)
+
+    return {"message": "Week schedule updated"}
