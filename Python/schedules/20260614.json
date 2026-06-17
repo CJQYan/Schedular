@@ -1,0 +1,55 @@
+{
+  "days": [
+    [],
+    [
+      {
+        "position": {
+          "title": "Cashier",
+          "skillRequirements": ["cashier"]
+        },
+        "startTime": "09:00",
+        "endTime": "13:00"
+      },
+      {
+        "position": {
+          "title": "Manager",
+          "skillRequirements": ["manager"]
+        },
+        "startTime": "09:00",
+        "endTime": "17:00"
+      }
+    ],
+    [
+      {
+        "position": {
+          "title": "Cashier",
+          "skillRequirements": ["cashier"]
+        },
+        "startTime": "13:00",
+        "endTime": "17:00"
+      }
+    ],
+    [
+      {
+        "position": {
+          "title": "Stock",
+          "skillRequirements": ["stock"]
+        },
+        "startTime": "08:00",
+        "endTime": "12:00"
+      }
+    ],
+    [],
+    [
+      {
+        "position": {
+          "title": "Supervisor",
+          "skillRequirements": ["supervisor"]
+        },
+        "startTime": "10:00",
+        "endTime": "18:00"
+      }
+    ],
+    []
+  ]
+}

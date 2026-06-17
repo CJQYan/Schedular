@@ -1,0 +1,16 @@
+# React
+FrontEnd/scheduler-ui/node_modules/
+FrontEnd/scheduler-ui/dist/
+
+# Python
+Python/__pycache__/
+Python/.venv/
+Python/venv/
+*.pyc
+
+# VS Code
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
