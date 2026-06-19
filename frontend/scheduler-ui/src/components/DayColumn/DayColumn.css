@@ -1,0 +1,41 @@
+.day {
+  background: white;
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+  padding: 12px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.day-title {
+  margin: 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.day-title:hover {
+  background-color: #e8f0ff;
+}
+
+.date {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.empty {
+  color: #999;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.shift-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
